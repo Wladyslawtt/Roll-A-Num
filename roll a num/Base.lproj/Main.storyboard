@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,61 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="roll_a_num" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="Afs-JF-Iem">
+                                <rect key="frame" x="-277" y="-38" width="910.66666666666663" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="mJx-hO-aUF"/>
+                                    <constraint firstAttribute="width" constant="910.66666666666652" id="nDj-3p-esY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qf-Ry-QT8">
+                                <rect key="frame" x="143" y="687" width="104" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="6aV-gc-8cU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Random" titleAlignment="trailing">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="randomView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZFR-d0-H3i"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="num1" translatesAutoresizingMaskIntoConstraints="NO" id="hlA-Za-ybc">
+                                <rect key="frame" x="-277" y="127" width="910.66666666666663" height="682.66666666666663"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Afs-JF-Iem" firstAttribute="centerX" secondItem="hlA-Za-ybc" secondAttribute="centerX" id="13M-zd-Qw7"/>
+                            <constraint firstItem="hlA-Za-ybc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="127" id="3SX-kc-Il1"/>
+                            <constraint firstAttribute="bottom" secondItem="2Qf-Ry-QT8" secondAttribute="bottom" constant="100" id="IVm-aQ-i2b"/>
+                            <constraint firstItem="Afs-JF-Iem" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-85" id="IwY-oR-Qt3"/>
+                            <constraint firstItem="Afs-JF-Iem" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-277" id="OfV-Ix-csO"/>
+                            <constraint firstItem="2Qf-Ry-QT8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fX1-cd-8pR"/>
+                            <constraint firstItem="2Qf-Ry-QT8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="143" id="lWA-wp-FPy"/>
+                            <constraint firstItem="Afs-JF-Iem" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-277" id="oA9-Cc-1vF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="numView" destination="hlA-Za-ybc" id="fnk-a5-mWf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="num1" width="910.66668701171875" height="682.66668701171875"/>
+        <image name="random" width="910.66668701171875" height="682.66668701171875"/>
+    </resources>
 </document>
